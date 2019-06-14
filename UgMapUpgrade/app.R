@@ -72,7 +72,7 @@ server <- function(input, output) {
       if (input$type == "refugees"){
         pop<- data.frame("Year"= migrants$Year, migrants$Residence, migrants$Origin, "Value"=migrants$Refugees)
       } else if (input$type == "asylum-seekers"){
-        pop <- mdata.frame("Year"= migrants$Year, migrants$Residence, migrants$Origin, "Value"=migrants$Asylum)
+        pop <- data.frame("Year"= migrants$Year, migrants$Residence, migrants$Origin, "Value"=migrants$Asylum)
       } else{
         pop <- data.frame("Year" =migrants$Year, migrants$Residence, migrants$Origin, "Value"=migrants$Total)
       }
