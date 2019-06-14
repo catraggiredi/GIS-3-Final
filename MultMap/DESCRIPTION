@@ -1,0 +1,9 @@
+Package: MultMap
+Title: Heatmap Compiler
+Version: 0.0.0.9000
+Authors@R: c(person("Catalina Raggi", role=c("aut","cre"), email = "catrag101@hotmail.com"),
+Description: This package takes a shapefile and creates a series of maps based off of a given variable
+Depends: R (>= 3.5.2)
+License: MIT
+Encoding: UTF-8
+LazyData: true
