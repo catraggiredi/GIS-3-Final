@@ -1,0 +1,66 @@
+Author:
+  Catalina Raggi
+  catrag101@hotmail.com
+  Cat is a 4th year statistics student at the University of Chicago 
+
+
+Overview:
+
+  This project looks at the migration of the UN's "Populations of Interest" to and from Uganda between the years 2000 and 2016.
+  
+  It contains both a Shiny app and an R file
+  Shiny app: "UgMapUpgrade/app.R" at https://github.com/catraggiredi/GIS-3-Final/blob/master/UgMapUpgrade/app.R
+  R file: "MultMap.R" at https://github.com/catraggiredi/GIS-3-Final/blob/master/MultMap/R/MultMap.R
+  
+  The Shiny app allows the user to look at migration to and from Uganda while customizing the year, type of migrant, and immigration verses emmigration to Uganda
+  The R file produces four heatmaps given a spatial database and the name of the variable column. 
+  These four heatmaps are divided using natural breaks, standard deviations, quantiles, and equal intervals.
+
+
+Goals and Objectives:
+
+  To investigate trends over time in Ugandan migration
+  To be able to differentiate between different types of migrants and their locations
+  To locate clusters of particularly high or low migrations and how they change
+  To provide a means of easily noticing cluster trends in data by quickly producing multiple types of heatmaps to find nuances in the data
+  Begin to investigage potential regions for the above discoveries
+ 
+ 
+Data Description:
+
+  Data for this project is taken largely from the UNHCR.
+  
+  "Timebased.csv"
+    The dataset saved as "timebased.csv" is the "Time-series data for UNHCR's population of concern residing in Uganda" dataset from the UNHCR and found on the Humanitarian Data Exchange website.
+    This dataset contains information regarding migration coming into Uganda from external countries, and includes the year for the data in the row, the country the refugee is coming from, the type of "population of concern", and the number of refugees.
+    This is the dataset that is used when the user selects "to" in the Shiny app
+    link: https://data.humdata.org/dataset/unhcr-time-series-residing-uga
+    
+  "RefFromUganda
+    The dataset saved as "RefFromUganda.csv" is the "Time-series data for UNHCR's populations of concern originating from Uganda" dataset found on the Humanitarian Data Exchange website using UNHCR data.
+    "RefFromUganda" contains information regarding migration coming from Uganda into external countries, and includes the year of the data, the country the refugee is going to, the type of "population of concern", and the number of refugees.
+    This is the dataset that is used when the user selects "from" in the Shiny app
+    link: https://data.humdata.org/dataset/unhcr-time-series-originating-uga
+    
+  world
+    The world shapefile database that comes with spData is used as the basemap containing the spatial data and is merged with both of the above files to create the map in the Shiny app
+ 
+ 
+Figures: 
+
+Pictures of the app and the file being used can be viewed here: https://drive.google.com/drive/folders/11tMUPoA_Ibv0m02xF1uPRHRK7_EBlBkw?usp=sharing
+
+
+Future Work:
+
+  In the future, I would like to be able to incorporate the R file into the Shiny app by also including a panel that shows the additional heatmaps from the file for the inputted data in addition to the heatmap already on the app.
+  I tried to do this in this project but had difficulty combining and including these additional maps in the app, although the script itself worked when the data was inputted manually outside of the app
+  Additionally, I would like to add another app that shows the concentration of "populations of concern" within the various districts of Uganda. I had the data to do this but spent too much time trying to incorporate it into the already made app.
+  The district based dataset did not differentiate based on type of migrant or the year, and made the controls on the app useless, which I did not like. My attempts to make a panel that would change based the user's input did not work.
+  From a qualitative perspective, I would also like to investigate the reasons for the trends in the data. In some cases, you see a sudden large jump in migration from one year to another that then lasts a certain amount of years (like asylum seekers in Sudan after 2006)
+  
+  
+  
+  
+  
+  
