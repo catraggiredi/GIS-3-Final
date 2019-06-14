@@ -20,7 +20,7 @@ library(tmap)
 # Define UI for application that draws a histogram
 ui <- fluidPage(
   
-  titlePanel("Originating Countries of UNHCR Populations of Concern in Uganda"),
+  titlePanel("Countries of UNHCR Populations of Concern Migrating To and From Uganda"),
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
